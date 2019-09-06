@@ -23,7 +23,7 @@
 
             document.body.appendChild(renderer.domElement);
 
-            var light = new THREE.AmbientLight( 0x404040 ); // soft white light
+            var light = new THREE.AmbientLight( 0x404040, 0.05 ); // soft white light
             scene.add( light );
 
             var loader = new THREE.GLTFLoader();
@@ -40,7 +40,7 @@
                 console.error ( error );
             } );
 
-            camera.position.z = -10;
+            camera.position.z = -5;
 
             function animate() {
                 requestAnimationFrame(animate);
